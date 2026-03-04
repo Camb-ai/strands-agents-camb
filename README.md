@@ -1,4 +1,4 @@
-# strands-camb
+# strands-agents-camb
 
 > **Community-maintained package** - This package is not owned or supported by the Strands team. It is maintained by [CAMB.AI](https://camb.ai).
 
@@ -13,13 +13,13 @@ CAMB.AI audio and speech tools for [Strands Agents](https://github.com/strands-a
 ## Installation
 
 ```bash
-pip install strands-camb
+pip install strands-agents-camb
 ```
 
 The `[url]` extra installs `httpx`, which is required for translated TTS (always) and for URL-based audio operations (transcription from URL, audio separation from URL):
 
 ```bash
-pip install 'strands-camb[url]'
+pip install 'strands-agent-camb[url]'
 ```
 
 ## Quick Start
