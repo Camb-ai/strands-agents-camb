@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "strands-camb"
+version = "0.1.0"
+description = "CAMB.AI audio/speech tools for Strands Agents"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "CAMB.AI", email = "support@camb.ai" },
+]
+keywords = ["strands", "agents", "camb", "tts", "speech", "audio", "translation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "strands-agents>=1.0.0",
+    "camb>=0.0.1",
+]
+
+[project.optional-dependencies]
+url = ["httpx>=0.20.0"]
+dev = [
+    "httpx>=0.20.0",
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/camb-ai/strands-camb"
+Documentation = "https://github.com/camb-ai/strands-camb#readme"
+Repository = "https://github.com/camb-ai/strands-camb"
+Issues = "https://github.com/camb-ai/strands-camb/issues"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
